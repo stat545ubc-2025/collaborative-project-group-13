@@ -1,1 +1,13 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/9EMQ9uX-)
+**README file**
+
+This project contains the deliverables required for the Collaborative Project 1.
+
+The files in the project folder consist of the following:
+
+| File | Description |
+|---|-----|
+| README.md (current document) | Project information, list of files and instructions for running codes in project |
+| TEAMWORK.md | Team contract outlining division of labour, timing and communication |
+| troubleshooting-1.Rmd | Corrected code for troubleshooting task |
+| troubleshooting-1.md | Knitted file for troubleshooting task |
+| Pull requests | History of pull requests and comments verifying changes |
