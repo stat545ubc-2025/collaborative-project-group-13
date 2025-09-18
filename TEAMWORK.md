@@ -9,7 +9,7 @@ Member | Target submission date of pull request
 ---|--
 @nganmatthias | 18 September 2025, 12 pm
 @aliceh0ng | ????
-@kristifourie | ????
+@kristifourie | 18 September 2025, 12 pm
 @zaralipour | ????
 
 
