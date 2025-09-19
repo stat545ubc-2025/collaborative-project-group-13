@@ -22,7 +22,7 @@ The files in the project folder consist of the following:
 
 1. Clone this repository to your local machine:
    ```bash
-   git clone <https://github.com/stat545ubc-2025/collaborative-project-group-13>
+   git clone https://github.com/stat545ubc-2025/collaborative-project-group-13
 2. Open the project in RStudio
 3. Ensure the following R packages are installed:
    * tidyverse
@@ -30,6 +30,6 @@ The files in the project folder consist of the following:
    * rmarkdown
 4. Knit the troubleshooting-1.Rmd file to generate the .md output:
    ```r
-   rmarkdown::render("troubleshootoing-1.Rmd")
+   rmarkdown::render("troubleshooting-1.Rmd")
    ```
-5. Review the knitted .md file (troubleshotting-1.md) for results
+5. Review the knitted .md file (troubleshooting-1.md) for results
