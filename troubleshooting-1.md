@@ -1,3 +1,6 @@
+STAT 545A Troubleshooting Exercise for Milestone 1
+================
+
 There are **3 code chunks with errors** in this Rmd. Your objective is
 to fix all of the errors in this worksheet. Make sure to indicate what
 lines you changed and why (by commenting \# in the code).
@@ -13,8 +16,10 @@ explore the `mtcars` dataset.
 First, let’s store the current date as a variable. We can use the
 function `Sys.Date` with no arguments to get the current date:
 
-    ## ERROR 1 ##
-    today <- Sys.Date() # Edit variable name to an acceptable name
+``` r
+## ERROR 1 ##
+today <- Sys.Date() # Edit variable name to an acceptable name
+```
 
 You may notice that, although an error might appear in these cells, this
 Rmd file knits just fine. That’s because the `error = TRUE` *chunk
@@ -23,8 +28,10 @@ when an error is encountered.
 
 Now, let’s load the `tidyverse` (meta-) package:
 
-    ## ERROR 2 ##
-    library(tidyverse) # Rename to correct function
+``` r
+## ERROR 2 ##
+library(tidyverse) # Rename to correct function
+```
 
     ## Warning: package 'tibble' was built under R version 4.4.1
 
@@ -44,8 +51,10 @@ available. This function is useful for viewing a data set. Let’s take a
 look at the `mtcars` dataset by applying the `glimpse` function to
 `mtcars`!
 
-    ## ERROR 3 ##
-    glimpse(mtcars) # Add in brackets for function
+``` r
+## ERROR 3 ##
+glimpse(mtcars) # Add in brackets for function
+```
 
     ## Rows: 32
     ## Columns: 11
@@ -60,8 +69,6 @@ look at the `mtcars` dataset by applying the `glimpse` function to
     ## $ am   <dbl> 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0,…
     ## $ gear <dbl> 4, 4, 4, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4, 3, 3,…
     ## $ carb <dbl> 4, 4, 1, 1, 2, 1, 4, 2, 2, 4, 4, 3, 3, 3, 4, 4, 4, 1, 2, 1, 1, 2,…
-
-\`\`\`
 
 ## Attribution
 
