@@ -21,22 +21,24 @@ Member | Target submission date of pull request
 @nganmatthias | 18 September 2025, 12 pm  
 @aliceh0ng | 19 September 2025, 5 pm  
 @kristifourie | 19 September 2025, 8 pm  
-@zaralipour | 19 September 2025, 8:30 pm  
+@zaralipour | 19 September 2025, 8 pm  
 
 ---
 
 ## 💬 Communication
-- **Slack**: logistics (scheduling, reminders, availability)
-- **GitHub Issues:** technical topics (merge conflicts, troubleshooting, agendas)
-- **Response time:** within **24 hours** during the milestone window
-- All major changes go through PRs to preserve history and accountability
+
+- **Slack** will be used for administrative matters (e.g., scheduling meetings, reminders).  
+- **GitHub Issues** will be used for technical issues (e.g., merge conflicts, troubleshooting errors).  
+- Pull requests will be reviewed within 24 hours of submission.  
+- All major changes will be documented through pull requests to maintain version history and accountability.
+
+**Communication**
+
+* For administrative matters (e.g. deciding on meeting times, reminding each other to complete their deliverables), communication will be done through Slack.
+
+* For technical issues and queries (e.g. merge problems, troubleshooting errors), GitHub Issues is used instead.
 
 ---
-
-## 🔀 Branching & PR policy
-- Branch names: `feat/<short-desc>` for new work; `fix/<short-desc>` for fixes  
-- Everyone must (1) open one PR and (2) review/merge a teammate’s PR  
-
 
 ## ✅ Conflict Resolution
 
