@@ -17,12 +17,13 @@ Note that errors are not all syntactic (i.e., broken code)! Some are logical err
 
 ```{r}
 ### ERROR HERE ###
-load.packages(dslabs)
-load.packages(tidyverse)
-load.packages(stringr)
-install.packages("devtools") # Do not run this if you already have this package installed! 
+# Assuming dslabs, tidyverse, stringr and gapminder have been installed previously
+library(dslabs) # Corrected function to load package
+library(tidyverse) # Corrected function to load package
+library(stringr)  # Corrected function to load package
+# install.packages("devtools") # Do not run this if you already have this package installed! 
 devtools::install_github("JoeyBernhardt/singer")
-load.packages(gapminder)
+library(gapminder) # Corrected function to load package
 ```
 
 Let's have a look at the dataset! My goal is to:
@@ -34,8 +35,12 @@ Let's have a look at the dataset! My goal is to:
 ```{r}
 ### ERROR HERE ###
 class(dslabs::movielens)
-movieLens <- as_tibble(dslabs::movielens)
+if (is_tibble(dslabs::movielens) == FALSE) { # Conditional coerce if movielens is not a tibble
+  movieLens <- as_tibble(dslabs::movielens)
+}
 dim(movieLens)
+class(movieLens)
+glimpse(movieLens) # Get a quick look at the tibble
 ```
 
 Now that we've had a quick look at the dataset, it would be interesting to explore the rows (observations) in some more detail. I'd like to consider the movie entries that...
@@ -49,9 +54,9 @@ Now that we've had a quick look at the dataset, it would be interesting to explo
 ```{r}
 ### ERROR HERE ###
 filter(movieLens, genres == "Drama")
-filter(movieLens, !genres == "Drama")
-filter(movieLens, year >= 2000)
-filter(movieLens, year == 1999 | month == 2000)
+filter(movieLens, grepl("Drama",genres) & genres != "Drama") # grepl function for filtering movies that do not exclusively belong to "Drama"
+filter(movieLens, year > 2000) # Change >= to >
+filter(movieLens, year == 1999 | year == 2000) # Change month to year
 filter(movieLens, rating > 4.5, year < 1995)
 ```
 
@@ -60,8 +65,8 @@ While filtering for *all movies that do not belong to the genre drama* above, I 
 ```{r}
 ### ERROR HERE ###
 movieLens %>%
-  filter(!genres == "Drama") %>%
-  select(title, genres, year, rating, timestamp)
+  filter(genres != "Drama") %>% # Filter out movies belonging to drama
+  select(title, genres, everything()) # Move all other columns to the right of title and genres
 ```
 
 ## Exercise 2: Calculating with `mutate()`-like functions
