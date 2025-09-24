@@ -76,15 +76,15 @@ Some of the variables in the `movieLens` dataset are in *camelCase* (in fact, *m
 ```{r}
 ### ERROR HERE ###
 movieLens <- movieLens %>%
-  rename(user_id == userId,
-         movie_id == movieId)
+  rename(user_id = userId, # Corrected function for renaming
+         movie_id = movieId) # Corrected function for renaming
 ```
 
 As you already know, `mutate()` defines and inserts new variables into a tibble. There is *another mystery function similar to `mutate()`* that adds the new variable, but also drops existing ones. I wanted to create an `average_rating` column that takes the `mean(rating)` across all entries, and I only want to see that variable (i.e drop all others!) but I forgot what that mystery function is. Can you remember?
 
 ```{r}
 ### ERROR HERE ### 
-mutate(movieLens,
+transmute(movieLens,
        average_rating = mean(rating))
 ```
 
@@ -105,7 +105,7 @@ Without using `group_by()`, I want to find out how many movie reviews there have
 ```{r}
 ### ERROR HERE ###
 movieLens %>%
-  tally(year)
+  count(year) # Corrected tally to count
 ```
 
 Both `count()` and `tally()` can be grouped by multiple columns. Below, I want to count the number of movie reviews by title and rating, and sort the results.
@@ -113,7 +113,7 @@ Both `count()` and `tally()` can be grouped by multiple columns. Below, I want t
 ```{r}
 ### ERROR HERE ###
 movieLens %>%
-  count(c(title, rating), sort = TRUE)
+  count(title, rating, sort = TRUE) # Corrected function for count
 ```
 
 Not only do `count()` and `tally()` quickly allow you to count items within your dataset, `add_tally()` and `add_count()` are handy shortcuts that add an additional columns to your tibble, rather than collapsing each group.
@@ -133,7 +133,8 @@ Using `summarize()`, we can find the minimum and the maximum rating by title, st
 ```{r}
 ### ERROR HERE ###
 movieLens %>%
-  mutate(min_rating = min(rating), 
+  group_by(title) %>% # Group by title
+  summarize(min_rating = min(rating), # Corrected mutate to summarize
          max_rating = max(rating))
 ```
 
@@ -158,7 +159,7 @@ We can find the minimum height and mass within each species, ignoring the missin
 ### ERROR HERE ###
 starWars %>%
   group_by(species) %>%
-  summarise(across("height", "mass", function(x) min(x, na.rm=TRUE)))
+  summarise(across(c(height, mass), ~min(.x, na.rm=TRUE), .names = "min_{.col}")) # Corrected function for finding minimum
 ```
 
 Note that here R has taken the convention that the minimum value of a set of `NA`s is `Inf`.
