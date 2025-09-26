@@ -17,13 +17,20 @@ Note that errors are not all syntactic (i.e., broken code)! Some are logical err
 
 ```{r}
 ### ERROR HERE ###
-# Assuming dslabs, tidyverse, stringr and gapminder have been installed previously
-library(dslabs) # Corrected function to load package
-library(tidyverse) # Corrected function to load package
-library(stringr)  # Corrected function to load package
-# install.packages("devtools") # Do not run this if you already have this package installed! 
+
+# Run code below if you don' already have dslabs, tidyverse, stringr and gapminder have been installed previously
+# install.packages("dslabs")
+# install.packages("tidyverse")
+# install.packages("stringr")
+# install.packages("devtools")
+# install.packages("gapminder")
+
+# Loading Libraries, corrected function to load installed packages
+library(dslabs) 
+library(tidyverse) 
+library(stringr) 
 devtools::install_github("JoeyBernhardt/singer")
-library(gapminder) # Corrected function to load package
+library(gapminder)
 ```
 
 Let's have a look at the dataset! My goal is to:
@@ -84,8 +91,8 @@ As you already know, `mutate()` defines and inserts new variables into a tibble.
 
 ```{r}
 ### ERROR HERE ### 
-transmute(movieLens,
-       average_rating = mean(rating))
+transmute(movieLens, # Changes 'mutate' function to 'transmutate'
+       average_rating = mean(rating)) 
 ```
 
 ## Exercise 3: Calculating with `summarise()`-like functions
@@ -185,6 +192,7 @@ fakeStarWars <- tribble(
   "Beru Whitesun Iars", 4.05   ,   2004        ,  "Liverpool, England",
   "R5-D4"         ,  4.50      ,   2005        ,  "New York, NY",
 )
+fakeStarWars 
 ```
 
 ## Attributions
