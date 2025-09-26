@@ -15,7 +15,7 @@ The files in the project folder consist of the following:
 - [x] **troubleshooting-1.Rmd** : Corrected code for troubleshooting task
 - [x] **troubleshooting-1.md** : Knitted file for troubleshooting task 1 
 - [x] **troubleshooting-2.Rmd** : Corrected code for the second troubleshooting exercise
-- [x] **troubleshooting-2.md** : Knitted file for troubleshooting taks 2
+- [x] **troubleshooting-2.md** : Knitted file for troubleshooting task 2
 - [x] **Pull requests** : History of pull requests and comments verifying changes
 
 ---
@@ -25,6 +25,7 @@ The files in the project folder consist of the following:
 1. Clone this repository to your local machine:
    ```bash
    git clone https://github.com/stat545ubc-2025/collaborative-project-group-13
+   ```
 2. Open the project in RStudio
 3. Ensure the following R packages are installed:
    * tidyverse
@@ -43,6 +44,7 @@ The files in the project folder consist of the following:
 1. Clone this repository to your local machine:
    ```bash
    git clone https://github.com/stat545ubc-2025/collaborative-project-group-13
+   ```
 2. Open the project in RStudio
 3. Ensure the following R packages are installed:
    * tidyverse
