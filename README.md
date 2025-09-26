@@ -39,7 +39,7 @@ The files in the project folder consist of the following:
 
 ---
 
-## 🏃 How to Run 'troubleshooting-1.Rmd'
+## 🏃🏃 How to Run 'troubleshooting-2.Rmd'
 
 1. Clone this repository to your local machine:
    ```bash
