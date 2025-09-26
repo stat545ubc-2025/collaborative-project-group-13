@@ -25,35 +25,60 @@ required packages.
 
 ``` r
 ### ERROR HERE ###
-# Assuming dslabs, tidyverse, stringr and gapminder have been installed previously
-library(dslabs) # Corrected function to load package
-library(tidyverse) # Corrected function to load package
+
+# Run code below if you don' already have dslabs, tidyverse, stringr and gapminder have been installed previously
+# install.packages("dslabs")
+# install.packages("tidyverse")
+# install.packages("stringr")
+# install.packages("devtools")
+# install.packages("gapminder")
+
+# Loading Libraries, corrected function to load installed packages
+library(dslabs) 
 ```
+
+    ## Warning: package 'dslabs' was built under R version 4.4.1
+
+``` r
+library(tidyverse) 
+```
+
+    ## Warning: package 'ggplot2' was built under R version 4.4.1
+
+    ## Warning: package 'tibble' was built under R version 4.4.1
+
+    ## Warning: package 'purrr' was built under R version 4.4.1
+
+    ## Warning: package 'stringr' was built under R version 4.4.1
+
+    ## Warning: package 'forcats' was built under R version 4.4.1
+
+    ## Warning: package 'lubridate' was built under R version 4.4.1
 
     ## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
     ## ✔ dplyr     1.1.4     ✔ readr     2.1.5
-    ## ✔ forcats   1.0.0     ✔ stringr   1.5.1
-    ## ✔ ggplot2   3.5.2     ✔ tibble    3.3.0
+    ## ✔ forcats   1.0.1     ✔ stringr   1.5.2
+    ## ✔ ggplot2   4.0.0     ✔ tibble    3.3.0
     ## ✔ lubridate 1.9.4     ✔ tidyr     1.3.1
-    ## ✔ purrr     1.0.4     
+    ## ✔ purrr     1.1.0     
     ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
     ## ✖ dplyr::filter() masks stats::filter()
     ## ✖ dplyr::lag()    masks stats::lag()
     ## ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
 
 ``` r
-library(stringr)  # Corrected function to load package
-# install.packages("devtools") # Do not run this if you already have this package installed! 
+library(stringr) 
 devtools::install_github("JoeyBernhardt/singer")
 ```
 
-    ## Using GitHub PAT from the git credential store.
     ## Skipping install of 'singer' from a github remote, the SHA1 (2b4fe9cb) has not changed since last install.
     ##   Use `force = TRUE` to force installation
 
 ``` r
-library(gapminder) # Corrected function to load package
+library(gapminder)
 ```
+
+    ## Warning: package 'gapminder' was built under R version 4.4.1
 
     ## 
     ## Attaching package: 'gapminder'
@@ -264,8 +289,8 @@ I forgot what that mystery function is. Can you remember?
 
 ``` r
 ### ERROR HERE ### 
-transmute(movieLens,
-       average_rating = mean(rating))
+transmute(movieLens, # Changes 'mutate' function to 'transmutate'
+       average_rating = mean(rating)) 
 ```
 
     ## # A tibble: 100,004 × 1
@@ -507,7 +532,20 @@ fakeStarWars <- tribble(
   "Beru Whitesun Iars", 4.05   ,   2004        ,  "Liverpool, England",
   "R5-D4"         ,  4.50      ,   2005        ,  "New York, NY",
 )
+fakeStarWars 
 ```
+
+    ## # A tibble: 8 × 4
+    ##   name               birth_weight birth_year birth_location    
+    ##   <chr>                     <dbl>      <dbl> <chr>             
+    ## 1 Luke Skywalker             1.35       1998 Liverpool, England
+    ## 2 C-3PO                      1.8        1999 Liverpool, England
+    ## 3 R2-D2                      2.25       2000 Seattle, WA       
+    ## 4 Darth Vader                2.7        2001 Liverpool, England
+    ## 5 Leia Organa                3.15       2002 New York, NY      
+    ## 6 Owen Lars                  3.6        2003 Seattle, WA       
+    ## 7 Beru Whitesun Iars         4.05       2004 Liverpool, England
+    ## 8 R5-D4                      4.5        2005 New York, NY
 
 ## Attributions
 
