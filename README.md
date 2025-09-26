@@ -56,4 +56,4 @@ The files in the project folder consist of the following:
    ```r
    rmarkdown::render("troubleshooting-2.Rmd")
    ```
-5. Review the knitted .md file (troubleshooting-1.md) for results
+5. Review the knitted .md file (troubleshooting-2.md) for results
